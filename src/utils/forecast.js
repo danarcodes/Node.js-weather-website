@@ -7,7 +7,7 @@ const forecast = (latitude, longitude, callback) => {
     "," +
     longitude +
     "&units=m";
-  console.log(url);
+  // console.log(url);
 
   request({ url, json: true }, (error, { body }) => {
     if (error) {
@@ -20,7 +20,7 @@ const forecast = (latitude, longitude, callback) => {
         `The weather is ${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degrees out. It feels like ${body.current.feelslike}.`
       );
     }
-    console.log(body.current.temperature);
+    // console.log(body.current.temperature);
   });
 };
 
